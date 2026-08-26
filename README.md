@@ -44,3 +44,11 @@ Pareceria só matemática, resolvida pelo JS. Mas se o cálculo fosse só local,
 
 6. **Controlar uma sessão de usuário** — Server-side.
 Se a sessão fosse controlada só pelo navegador, um usuário poderia editar essa informação e se passar por outra pessoa sem nunca ter feito login de verdade. É o servidor quem cria e valida a identificação da sessão, o navegador só guarda e reenvia essa informação, mas não pode mudar sozinho.
+
+## Exercício 3 — Primeiro script e diagnóstico pelo console
+
+Quando troca `console.log` por `Console.log`, o navegador retornou o erro:
+
+`exercicio01.js:1 Uncaught ReferenceError: Console is not defined at exercicio01.js:1:1`
+
+O JavaScript é case sensitive `console` (minúsculo) é o objeto embutido do navegador que existe de verdade; `Console`(maiúsculo) é um nome que a linguagem não reconhece. Por isso nenhuma das quatro mensagens apareceu, o erro na primeira linha interrompeu a execução do script inteiro, e as linhas seguintes não chegaram a rodar.
