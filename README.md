@@ -52,3 +52,13 @@ Quando troca `console.log` por `Console.log`, o navegador retornou o erro:
 `exercicio01.js:1 Uncaught ReferenceError: Console is not defined at exercicio01.js:1:1`
 
 O JavaScript é case sensitive `console` (minúsculo) é o objeto embutido do navegador que existe de verdade; `Console`(maiúsculo) é um nome que a linguagem não reconhece. Por isso nenhuma das quatro mensagens apareceu, o erro na primeira linha interrompeu a execução do script inteiro, e as linhas seguintes não chegaram a rodar.
+
+## Exercício 6 — Conversão de dados
+
+O operador `+` em JavaScript tem dois comportamentos diferentes,
+dependendo do tipo dos valores: se pelo menos um dos lados for texto
+(string), o `+` concatena os dois valores como texto, em vez de somar.
+Como o `prompt()` sempre devolve o que foi digitado como string, se
+não convertermos antes, `"20" + 5` não soma, ele concatena os
+caracteres "20" e "5", e o resultado será "205". Por isso é necessário
+usar `Number()` para transformar o valor em número antes de somar.
